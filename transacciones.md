@@ -4,11 +4,11 @@ description: >-
   transacción y más.
 ---
 
-# 💸 Transacciones - Vender productos
+# 💸 Transacciones
 
 
 
-{% swagger method="post" path="accounts" baseUrl="/api/v1/transactions/" summary="Servicio que devuelve los saldos disponibles en la cuenta" expanded="true" %}
+{% swagger method="post" path="getBusiness" baseUrl="/api/v1/commerces/" summary="Servicio que devuelve los saldos disponibles en la cuenta" expanded="true" %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -23,12 +23,11 @@ Campo data
   "statusCode":200,
   "message": "Exitoso",
   "data": { 
-    "Account": {
+    "Business": {
       "balance":12000,
-      "profits":2300,
-      "currency": "COP"
-      }
-    },
+      "profits":2300
+    }
+  },
   "_channel": "web"
 }
 ```
