@@ -56,7 +56,7 @@ sales (indica el reporte de ventas)
 
 ### Consultar compras
 
-{% swagger method="post" path="list" baseUrl="/api/v1/transactions/" summary="Servicio que devuelve todas las compras o cargas de saldo en un rango de fechas especifico" %}
+{% swagger method="post" path="list" baseUrl="/api/v1/transactions/" summary="Servicio que devuelve todas las compras o cargas de saldo en un rango de fechas especifico" expanded="true" %}
 {% swagger-description %}
 El servicio devuelve un máximo de 1.000 transacciones
 {% endswagger-description %}
