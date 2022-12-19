@@ -53,8 +53,8 @@ description: >-
 Note: El campo "options" devuelve la información necesaria para reconstruir la vista a nivel gráfico
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="data" type="Object" required="true" %}
-
+{% swagger-parameter in="body" name="data.productId" type="string" required="true" %}
+Identificador del producto
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="Respuesta exitosa" %}
