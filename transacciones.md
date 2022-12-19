@@ -114,3 +114,72 @@ Id de la transacción a buscar
 | Procesando   | 4      |
 | Pago parcial | 5      |
 
+
+
+### Vender un producto
+
+
+
+{% swagger method="post" path="sell" baseUrl="/api/v1/transactions/" summary="Servicio que sirve para originar una venta" expanded="true" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="body" name="data.productId" type="String" %}
+ID del producto
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="data.*" type="String" %}
+Campos adicionales que requiera el producto 
+
+\
+
+
+
+
+\
+
+
+pueden ser consultados aquí 
+
+[#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto](productos.md#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto "mention")
+
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="" type="string" %}
+Enviar versión del API
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="_channel" type="string" %}
+Siempre enviar WS
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="_version" %}
+Enviar versión del API
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Venta exitosa" %}
+```json
+{
+  "message": "Exitoso",
+  "_channel": "WS",
+  "statusCode": 200,
+  "data": {
+    "transactionId": "5d2fa66e-4c73-4f86-b698-6bd5fd5284b1"
+  }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="Error en la venta" %}
+```json
+{
+  "path":"/sell",
+  "date":1671479625960,
+  "errorCode":"provider.error",
+  "message":"Número no es del operador"
+}
+```
+{% endswagger-response %}
+{% endswagger %}
