@@ -33,9 +33,9 @@
 ```json
 {
     "data": {
-        "id": "eff0340c-6146-4863-afd7-9b93b1e68b71" // ID de pronty,
+        "id": "eff0340c-6146-4863-afd7-9b93b1e68b71", // ID de pronty,
         "Amount": {
-            "cost:" 0,
+            "cost": 0,
             "amount": 200000
         },
         "reference": "ABC", // referencia del cliente
