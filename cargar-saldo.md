@@ -8,11 +8,15 @@
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="data.reference" %}
-
+Referencia de pago
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="data.amount" %}
+Valor a recaudar
+{% endswagger-parameter %}
 
+{% swagger-parameter in="body" name="data.confirmUrl" %}
+URL del webhook donde se notificará
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}
@@ -40,7 +44,7 @@
         },
         "reference": "ABC", // referencia del cliente
         "TransactionStatus": {
-            "id": 1,
+            "id": 2,
             "name": "Aprobado"
         },
         "PaymentMethod": {
