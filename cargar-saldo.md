@@ -19,6 +19,10 @@ Valor a recaudar
 URL del webhook donde se notificará
 {% endswagger-parameter %}
 
+{% swagger-parameter in="body" name="data.responseUrl" %}
+URL donde el usuario será redirigo luego de pagar
+{% endswagger-parameter %}
+
 {% swagger-response status="200: OK" description="" %}
 ```javascript
 {
