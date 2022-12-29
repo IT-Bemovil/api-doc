@@ -147,10 +147,6 @@ pueden ser consultados aquí
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="" type="string" %}
-Enviar versión del API
-{% endswagger-parameter %}
-
 {% swagger-parameter in="body" name="_channel" type="string" %}
 Siempre enviar WS
 {% endswagger-parameter %}
@@ -182,4 +178,46 @@ Enviar versión del API
 }
 ```
 {% endswagger-response %}
+{% endswagger %}
+
+
+
+
+
+### Consultar / Cotizar
+
+{% swagger method="post" path="query" baseUrl="/api/v1/transactions/" summary="Servicio que permite cotizar y obtener el valor de la venta" %}
+{% swagger-description %}
+Se recomienda siempre consumir este servicio, así el producto no requiera una consulta previa
+{% endswagger-description %}
+
+{% swagger-parameter in="body" name="data.productId" required="true" %}
+ID del producto
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="data.*" %}
+Campos adicionales que requiera el producto 
+
+\
+
+
+
+
+\
+
+
+pueden ser consultados aquí 
+
+[#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto](productos.md#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto "mention")
+
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="_channel" %}
+Siempre enviar WS
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="_version" %}
+Enviar versión del API
+{% endswagger-parameter %}
 {% endswagger %}
