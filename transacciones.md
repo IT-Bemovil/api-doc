@@ -186,7 +186,7 @@ Enviar versión del API
 
 ### Consultar / Cotizar
 
-{% swagger method="post" path="query" baseUrl="/api/v1/transactions/" summary="Servicio que permite cotizar y obtener el valor de la venta" %}
+{% swagger method="post" path="query" baseUrl="/api/v1/transactions/" summary="Servicio que permite cotizar y obtener el valor de la venta" expanded="true" %}
 {% swagger-description %}
 Se recomienda siempre consumir este servicio, así el producto no requiera una consulta previa
 {% endswagger-description %}
