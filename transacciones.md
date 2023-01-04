@@ -51,6 +51,10 @@ Campo data
 Id de la transacción a buscar
 {% endswagger-parameter %}
 
+{% swagger-parameter in="body" name="_id" %}
+Id del cliente (el mismo que se envió en la venta)
+{% endswagger-parameter %}
+
 {% swagger-response status="200: OK" description="Repuesta satisfactoria" %}
 ```json
 {
