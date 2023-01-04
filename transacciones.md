@@ -155,6 +155,10 @@ Siempre enviar WS
 Enviar versión del API
 {% endswagger-parameter %}
 
+{% swagger-parameter in="body" required="false" name="_id" %}
+Id del cliente (para conciliar)
+{% endswagger-parameter %}
+
 {% swagger-response status="200: OK" description="Venta exitosa" %}
 ```json
 {
