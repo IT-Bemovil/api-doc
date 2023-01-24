@@ -56,4 +56,16 @@ Tamaño del paquete\
 {% swagger-parameter in="body" name="data.Package.declaredValue" required="true" %}
 Valor declarado del paquete
 {% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Respuesta exitosa" %}
+```javascript
+{
+    "Quote": {
+        "amount": 5000,
+        "distance": 3,
+        "time": 35
+    }
+}
+```
+{% endswagger-response %}
 {% endswagger %}
