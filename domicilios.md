@@ -1,6 +1,8 @@
 # 🛵 Domicilios
 
-{% swagger method="post" path="quoteDelivery" baseUrl="/api/v1/orders/" summary="" expanded="true" %}
+
+
+{% swagger method="post" path="quoteDelivery" baseUrl="/api/v1/orders/" summary="Cotizar domicilio" expanded="true" %}
 {% swagger-description %}
 Este servicio se usa para cotizar un servicio, además devuelve los kilometros y tiempo estimado de entrega
 {% endswagger-description %}
@@ -68,4 +70,52 @@ Valor declarado del paquete
 }
 ```
 {% endswagger-response %}
+{% endswagger %}
+
+
+
+{% swagger method="post" path="requestDelivery" baseUrl="/api/v1/orders/" summary="Solicitar servicio" expanded="true" %}
+{% swagger-description %}
+Este servicio sirve para solicitar un servicio, además devuelve una URL de seguimiento y monitoreo del servicio
+{% endswagger-description %}
+
+{% swagger-parameter in="body" name="data.Origin.latitude" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="data.Origin.longitude" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="data.Origin.address" required="true" %}
+Dirección de recogida
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="data.Origin.reference" %}
+Referencia para recoger el servicio
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="data.Destiny.latitude" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="data.Destiny.longitude" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="data.Destiny.address" required="true" %}
+Dirección de entrega
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="data.Destiny.reference" %}
+Referencia geo locativa para el driver
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="data.Customer.name" required="true" %}
+Nombre de quien se entrega el servicio
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="data.Customer.cellphone" required="true" %}
+Celular de la persona que recibe el servicio
+{% endswagger-parameter %}
 {% endswagger %}
