@@ -146,7 +146,7 @@ Campos adicionales que requiera el producto
 
 pueden ser consultados aquí 
 
-[#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto](productos.md#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto "mention")
+[#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto](productos/#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto "mention")
 
 
 {% endswagger-parameter %}
@@ -216,7 +216,7 @@ Campos adicionales que requiera el producto
 
 pueden ser consultados aquí 
 
-[#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto](productos.md#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto "mention")
+[#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto](productos/#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto "mention")
 
 
 {% endswagger-parameter %}
