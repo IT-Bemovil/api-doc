@@ -38,17 +38,13 @@ Campo data
 
 
 
-{% swagger method="post" path="get" baseUrl="/api/v1/transactions/" summary="Servicio que devuelve toda la información de una transacción" expanded="true" %}
+{% swagger method="post" path="find" baseUrl="/api/v1/transactions/" summary="Servicio que devuelve toda la información de una transacción" expanded="true" %}
 {% swagger-description %}
-
+Este servicio devuelve información de una transacción si esta fue efectuada en los últimos dos días. 
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="data" type="Object" required="true" %}
 
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="data.transactionId" required="true" %}
-Id de la transacción a buscar
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="_id" %}
