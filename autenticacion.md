@@ -7,7 +7,7 @@
 Url de producción para efectuar transacciones reales
 
 {% hint style="info" %}
-https://api.pronty.co
+https://api.bemovil.net
 {% endhint %}
 
 #### Ambiente de pruebas
@@ -15,10 +15,8 @@ https://api.pronty.co
 Url de pruebas para efectuar transacciones de prueba
 
 {% hint style="info" %}
-https://api.sandbox.pronty.co
+https://api.sandbox.bemovil.net
 {% endhint %}
-
-
 
 ### Autorización
 
@@ -31,4 +29,3 @@ La forma de autenticación será por headers en el campo "Authorization", el tok
   }
 }
 ```
-
