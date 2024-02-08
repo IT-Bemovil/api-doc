@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introducción](README.md)
+* [Introducción API](README.md)
 * [🔓 Autenticación](autenticacion.md)
 * [💔 Errores](errores.md)
 * [💸 Transacciones](transacciones.md)
