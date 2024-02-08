@@ -7,7 +7,7 @@
 Url de producción para efectuar transacciones reales
 
 {% hint style="info" %}
-https://api.bemovil.net
+https://apiv2.bemovil.net
 {% endhint %}
 
 #### Ambiente de pruebas
@@ -15,7 +15,7 @@ https://api.bemovil.net
 Url de pruebas para efectuar transacciones de prueba
 
 {% hint style="info" %}
-https://api.sandbox.bemovil.net
+https://apiv2.sandbox.bemovil.net
 {% endhint %}
 
 ### Autorización
