@@ -25,8 +25,8 @@
 
 El campo \_geolocation se valida si el producto está activo contra la ciudad más cercana
 
-{% code lineNumbers="true" %}
 ```json
+
 {
   "data": {
     "productId": 206000,
@@ -45,6 +45,64 @@ El campo \_geolocation se valida si el producto está activo contra la ciudad m�
   }
 }
 ```
-{% endcode %}
+
+</details>
+
+<details>
+
+<summary>Vender Pago Facturas</summary>
+
+```json
+{
+  "data": {
+    "productId": 527611,
+    "reference": "8612312",
+    "customerCellphone": "3148527176"
+    "amount": 29500
+  },
+  "_version": "1.10.2",
+  "_channel": "WS",
+  "_geolocation": null
+}
+```
+
+</details>
+
+<details>
+
+<summary>Vender  Pines</summary>
+
+```json
+  "data": {
+    "productId": 101001,
+    "customerCellphone": "3148527176",
+    "customerEmail": "luis.correal@bemovil.net",
+    "amount": 20000
+  },
+  "_version": "1.10.2",
+  "_channel": "WS",
+  "_geolocation": null
+}
+```
+
+</details>
+
+<details>
+
+<summary>Vender Paquetes Móviles</summary>
+
+```json
+{
+  "data": {
+    "productId": 20043,
+    "customerCellphone": "3148527176",
+    "amount": 16000
+  },
+  "_deviceId": "6c7ec409-249a-4f21-9a92-720e441fd998",
+  "_version": "1.10.2",
+  "_channel": "WS",
+  "_geolocation": null
+}
+```
 
 </details>
