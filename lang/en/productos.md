@@ -1,25 +1,25 @@
 ---
 description: >-
-  Servicios que permiten consultar productos, comisiones, imágenes, datos para
-  reconstruir la vista a nivel gráfico, etc.
+  Services that allow querying products, commissions, images, data for
+  reconstructing the graphical view, etc.
 ---
 
 # Products
 
-{% swagger method="post" path="list" baseUrl="/apiv1/products/" summary="Servicio que permite consultar productos y su comisión asignada" expanded="true" %}
+{% swagger method="post" path="list" baseUrl="/apiv1/products/" summary="Service that allows querying products and their assigned commission." expanded="true" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="data" required="true" type="Object" %}
-
+Data field
 {% endswagger-parameter %}
 
-{% swagger-response status="200: OK" description="Respuesta exitosa" %}
+{% swagger-response status="200: OK" description="Successful" %}
 ```javascript
 {
   "statusCode":200,
-  "message":"Exitoso",
+  "message":"Successful",
   "data":{
     "Categories": [
       {
@@ -46,16 +46,16 @@ description: >-
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="post" path="get" baseUrl="/api/v1/products/" summary="Servicio que permite obtener toda la información a detalle de un producto" expanded="true" %}
+{% swagger method="post" path="get" baseUrl="/api/v1/products/" summary="Service that allows obtaining all detailed information about a product." expanded="true" %}
 {% swagger-description %}
-Note: El campo "options" devuelve la información necesaria para reconstruir la vista a nivel gráfico
+Note: The "options" field returns the necessary information to reconstruct the graphical view.
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="data.productId" type="string" required="true" %}
-Identificador del producto
+Product ID
 {% endswagger-parameter %}
 
-{% swagger-response status="200: OK" description="Respuesta exitosa" %}
+{% swagger-response status="200: OK" description="Successful" %}
 ```javascript
 {
   "statusCode":200,
