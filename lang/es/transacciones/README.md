@@ -4,7 +4,7 @@ description: >-
   transacción y más.
 ---
 
-# 💸 Transacciones
+# Transacciones
 
 {% swagger method="post" path="getBusiness" baseUrl="/api/v1/commerces/" summary="Servicio que devuelve los saldos disponibles en la cuenta" expanded="true" %}
 {% swagger-description %}

@@ -2,9 +2,7 @@
 description: Consultar los reportes asociados a las transacciones
 ---
 
-# 📅 Reportes
-
-
+# Reportes
 
 ### Consultar ventas
 
@@ -17,11 +15,11 @@ El servicio devuelve un máximo de 1.000 transacciones
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="data.dateStart" type="string" %}
+{% swagger-parameter in="body" name="data.dateStart" type="string" required="false" %}
 YYYY-MM-DD filtro de rango de fecha inicial
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="data.dateEnd" type="string" %}
+{% swagger-parameter in="body" name="data.dateEnd" type="string" required="false" %}
 YYYY-MM-DD filtro de rango de fecha final
 {% endswagger-parameter %}
 
@@ -52,8 +50,6 @@ sales (indica el reporte de ventas)
 {% endswagger-response %}
 {% endswagger %}
 
-
-
 ### Consultar compras
 
 {% swagger method="post" path="list" baseUrl="/api/v1/transactions/" summary="Servicio que devuelve todas las compras o cargas de saldo en un rango de fechas especifico" expanded="true" %}
@@ -65,15 +61,15 @@ El servicio devuelve un máximo de 1.000 transacciones
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="data.typeReport" type="string" %}
+{% swagger-parameter in="body" name="data.typeReport" type="string" required="false" %}
 buys (valor fijo que indica reporte de compras)
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="data.dateStart" type="string" %}
+{% swagger-parameter in="body" name="data.dateStart" type="string" required="false" %}
 Fecha de inicio (YYYYMM-DD)
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="data.dateEnd" type="string" %}
+{% swagger-parameter in="body" name="data.dateEnd" type="string" required="false" %}
 YYYY-MM-DD filtro de rango de fecha final
 {% endswagger-parameter %}
 

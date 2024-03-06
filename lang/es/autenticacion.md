@@ -1,4 +1,4 @@
-# 🔓 Autenticación
+# Autenticación
 
 ### Ambientes API
 

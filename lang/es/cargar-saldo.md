@@ -1,4 +1,4 @@
-# 💸 Cargar saldo
+# Cargar saldo
 
 {% swagger method="post" path="generateLink" baseUrl="transactions/payment/" summary="Servicio que genera un link de pago" expanded="true" %}
 {% swagger-description %}

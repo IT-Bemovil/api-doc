@@ -4,7 +4,7 @@ description: >-
   reconstruir la vista a nivel gráfico, etc.
 ---
 
-# 😁 Productos
+# Productos
 
 {% swagger method="post" path="list" baseUrl="/apiv1/products/" summary="Servicio que permite consultar productos y su comisión asignada" expanded="true" %}
 {% swagger-description %}
@@ -46,8 +46,6 @@ description: >-
 {% endswagger-response %}
 {% endswagger %}
 
-
-
 {% swagger method="post" path="get" baseUrl="/api/v1/products/" summary="Servicio que permite obtener toda la información a detalle de un producto" expanded="true" %}
 {% swagger-description %}
 Note: El campo "options" devuelve la información necesaria para reconstruir la vista a nivel gráfico
@@ -86,6 +84,3 @@ Identificador del producto
 ```
 {% endswagger-response %}
 {% endswagger %}
-
-
-

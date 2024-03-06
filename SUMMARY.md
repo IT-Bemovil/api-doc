@@ -1,13 +1,13 @@
 # Table of contents
 
-## Group 1
+## Languages <a href="#lang" id="lang"></a>
 
 * [Español](README.md)
-  * [Introducción API](group-1/espanol/readme.md)
-  * [🔓 Autenticación](group-1/espanol/autenticacion.md)
-  * [💔 Errores](group-1/espanol/errores.md)
-  * [💸 Transacciones](group-1/espanol/transacciones/README.md)
-    * [Ejemplos](group-1/espanol/transacciones/examples.md)
-  * [😁 Productos](group-1/espanol/productos.md)
-  * [📅 Reportes](group-1/espanol/reportes.md)
-  * [💸 Cargar saldo](group-1/espanol/cargar-saldo.md)
+  * [Introducción API](lang/es/readme.md)
+  * [Autenticación](lang/es/autenticacion.md)
+  * [Errores](lang/es/errores.md)
+  * [Transacciones](lang/es/transacciones/README.md)
+    * [Ejemplos](lang/es/transacciones/examples.md)
+  * [Productos](lang/es/productos.md)
+  * [Reportes](lang/es/reportes.md)
+  * [Cargar saldo](lang/es/cargar-saldo.md)
