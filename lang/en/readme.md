@@ -11,3 +11,5 @@ Here is all the documentation you need to consult, manage, and generate transact
 * Test proper consumption of services
 * Develop consumption of necessary endpoints
 * Move to production stage
+
+<figure><img src="../../.gitbook/assets/flujo_bemovil.drawio.png" alt=""><figcaption></figcaption></figure>
