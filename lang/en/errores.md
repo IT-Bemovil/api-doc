@@ -1,30 +1,30 @@
 # Errors
 
-### Estructura de los errores
+### Error structure
 
-Los errores siempre contarán con la siguiente estructura:
+Errors will always have the following structure:
 
 ```json
 {
-  "errorMessage": "Descripción del error"
+  "errorMessage": "Error description"
   "path": "/api/v1/som/path",
   "date": 123123123, // UNIX FORMAT
   "errorCode": "undefined.error"
 }
 ```
 
-### Manejo HTTP Status Code
+### Handling HTTP Status Codes
 
-Estos serán dados por el HTTP status Code
+These will be provided by the HTTP status code.
 
-| Http Status Code |                                |
-| ---------------- | ------------------------------ |
-| 200              | OK                             |
-| 400              | Error del usuario              |
-| 401              | Error de autenticación         |
-| 404              | Error de recurso no encontrado |
-| 500              | Error del servidor             |
+| Http Status Code |                      |
+| ---------------- | -------------------- |
+| 200              | OK                   |
+| 400              | User error           |
+| 401              | Authentication error |
+| 404              | Resource not found   |
+| 500              | Server error         |
 
-### Manejo de timeout
+### Timeout handling
 
-El timeout definido máximo para una transacción será de 60 segundos
+The maximum defined timeout for a transaction will be 60 seconds.
