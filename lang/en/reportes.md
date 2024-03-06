@@ -1,33 +1,33 @@
 ---
-description: Consultar los reportes asociados a las transacciones
+description: Query the reports associated with transactions.
 ---
 
 # Reports
 
 ### Sell Queries
 
-{% swagger method="post" path="list" baseUrl="/api/v1/transactions/" summary="Servicio que devuelve todas las transacciones de venta en un rango de fechas especifico" expanded="true" %}
+{% swagger method="post" path="list" baseUrl="/api/v1/transactions/" summary="Service that returns all sales transactions within a specific date range." expanded="true" %}
 {% swagger-description %}
-El servicio devuelve un máximo de 1.000 transacciones
+The service returns a maximum of 1,000 transactions.
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="data" type="Object" required="true" %}
-
+Data field
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="data.dateStart" type="string" required="false" %}
-YYYY-MM-DD filtro de rango de fecha inicial
+YYYY-MM-DD initial date range filter
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="data.dateEnd" type="string" required="false" %}
-YYYY-MM-DD filtro de rango de fecha final
+YYYY-MM-DD initial date range filter
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="data.typeReport" type="string" required="true" %}
-sales (indica el reporte de ventas)
+"sales" (indicates the sales report)
 {% endswagger-parameter %}
 
-{% swagger-response status="200: OK" description="Respuesta satisfactoria" %}
+{% swagger-response status="200: OK" description="Satisfactory response" %}
 <pre class="language-javascript"><code class="lang-javascript"><strong>{
 </strong>  "status": 200,
   "data": {
@@ -52,28 +52,28 @@ sales (indica el reporte de ventas)
 
 ### Buy queries
 
-{% swagger method="post" path="list" baseUrl="/api/v1/transactions/" summary="Servicio que devuelve todas las compras o cargas de saldo en un rango de fechas especifico" expanded="true" %}
+{% swagger method="post" path="list" baseUrl="/api/v1/transactions/" summary="Service that returns all purchases or balance loads within a specific date range." expanded="true" %}
 {% swagger-description %}
-El servicio devuelve un máximo de 1.000 transacciones
+The service returns a maximum of 1,000 transactions.
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="data" type="Object" required="true" %}
-
+Data field
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="data.typeReport" type="string" required="false" %}
-buys (valor fijo que indica reporte de compras)
+"buys" (fixed value indicating the purchases report)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="data.dateStart" type="string" required="false" %}
-Fecha de inicio (YYYYMM-DD)
+YYYY-MM-DD initial date range filter
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="data.dateEnd" type="string" required="false" %}
-YYYY-MM-DD filtro de rango de fecha final
+YYYY-MM-DD initial date range filter
 {% endswagger-parameter %}
 
-{% swagger-response status="200: OK" description="" %}
+{% swagger-response status="200: OK" description="Satisfactory response" %}
 ```javascript
 {
   "status": 200,

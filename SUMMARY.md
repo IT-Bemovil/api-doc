@@ -19,4 +19,3 @@
     * [Examples](lang/en/transacciones/examples.md)
   * [Products](lang/en/productos.md)
   * [Reports](lang/en/reportes.md)
-  * [Add balance](lang/en/cargar-saldo.md)
