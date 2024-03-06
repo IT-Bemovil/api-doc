@@ -1,25 +1,25 @@
 ---
 description: >-
-  Grupo de servicios para ver una transacción, consultar saldos, crear una nueva
-  transacción y más.
+  Service group for viewing a transaction, checking balances, creating a new
+  transaction, and more.
 ---
 
 # Transactions
 
-{% swagger method="post" path="getBusiness" baseUrl="/api/v1/commerces/" summary="Servicio que devuelve los saldos disponibles en la cuenta" expanded="true" %}
+{% swagger method="post" path="getBusiness" baseUrl="/api/v1/commerces/" summary="Service that returns the available balances in the account." expanded="true" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="body" required="true" name="data" type="Object" %}
-Campo data
+data field
 {% endswagger-parameter %}
 
-{% swagger-response status="200: OK" description="Respuesta exitosa" %}
+{% swagger-response status="200: OK" description="Succesful response" %}
 ```json
 {
   "statusCode":200,
-  "message": "Exitoso",
+  "message": "Sucessful",
   "data": { 
     "Business": {
       "balance":12000,
@@ -32,9 +32,9 @@ Campo data
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="post" path="find" baseUrl="/api/v1/transactions/" summary="Servicio que devuelve toda la información de una transacción" expanded="true" %}
+{% swagger method="post" path="find" baseUrl="/api/v1/transactions/" summary="Service that returns all the information about a transaction." expanded="true" %}
 {% swagger-description %}
-Este servicio devuelve información de una transacción si esta fue efectuada en los últimos dos días.
+This service returns information about a transaction if it was carried out within the last two days.
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="data" type="Object" required="true" %}
@@ -42,10 +42,10 @@ Este servicio devuelve información de una transacción si esta fue efectuada en
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="_id" required="false" %}
-Id del cliente (el mismo que se envió en la venta)
+Customer ID (the same as sent in the sale)
 {% endswagger-parameter %}
 
-{% swagger-response status="200: OK" description="Repuesta satisfactoria" %}
+{% swagger-response status="200: OK" description="Sucessful" %}
 ```json
 {
   "statusCode":200,
@@ -84,7 +84,7 @@ Id del cliente (el mismo que se envió en la venta)
 ```
 {% endswagger-response %}
 
-{% swagger-response status="404: Not Found" description="Transacción no encontrada" %}
+{% swagger-response status="404: Not Found" description="Transaction not found" %}
 ```javascript
 {
   "errorMessage": "Transacción no encontrada"
@@ -96,52 +96,48 @@ Id del cliente (el mismo que se envió en la venta)
 {% endswagger-response %}
 {% endswagger %}
 
-### Estados de una transacción
+### Status transaction
 
-| Estado       | Codigo |
-| ------------ | ------ |
-| Pendiente    | 1      |
-| Aprobada     | 2      |
-| Rechazada    | 3      |
-| Procesando   | 4      |
-| Pago parcial | 5      |
+| Estado     | Codigo |
+| ---------- | ------ |
+| PENDING    | 1      |
+| APPROVED   | 2      |
+| REJECTED   | 3      |
+| PROCESSING | 4      |
+| PARTIAL    | 5      |
 
-### Vender un producto
+### Sell a product
 
-{% swagger method="post" path="sell" baseUrl="/api/v1/transactions/" summary="Servicio que sirve para originar una venta" expanded="true" %}
+{% swagger method="post" path="sell" baseUrl="/api/v1/transactions/" summary="Service used to initiate a sale" expanded="true" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="data.productId" type="String" required="false" %}
-ID del producto
+Product ID
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="data.*" type="String" required="false" %}
-Campos adicionales que requiera el producto
+Additional fields required for the product can be consulted here.
 
-\\
 
-\\
-
-pueden ser consultados aquí
 
 [#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto](../../es/productos.md#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto "mention")
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="_channel" type="string" required="false" %}
-Siempre enviar WS
+Always send "WS"
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="_version" required="false" %}
-Enviar versión del API
+API version
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" required="false" name="_id" %}
-Id del cliente (para conciliar)
+customer ID
 {% endswagger-parameter %}
 
-{% swagger-response status="200: OK" description="Venta exitosa" %}
+{% swagger-response status="200: OK" description="Sucessful" %}
 ```json
 {
   "message": "Exitoso",
@@ -154,7 +150,7 @@ Id del cliente (para conciliar)
 ```
 {% endswagger-response %}
 
-{% swagger-response status="400: Bad Request" description="Error en la venta" %}
+{% swagger-response status="400: Bad Request" description="transaction error" %}
 ```json
 {
   "path":"/sell",
@@ -166,34 +162,30 @@ Id del cliente (para conciliar)
 {% endswagger-response %}
 {% endswagger %}
 
-### Consultar / Cotizar
+### Inquire / Quote
 
-{% swagger method="post" path="query" baseUrl="/api/v1/transactions/" summary="Servicio que permite cotizar y obtener el valor de la venta" expanded="true" %}
+{% swagger method="post" path="query" baseUrl="/api/v1/transactions/" summary="Service that allows for quoting and obtaining the sale value" expanded="true" %}
 {% swagger-description %}
-Se recomienda siempre consumir este servicio, así el producto no requiera una consulta previa
+It is recommended to always consume this service, even if the product does not require a prior inquiry.
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="data.productId" required="true" %}
-ID del producto
+Product ID
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="data.*" required="false" %}
-Campos adicionales que requiera el producto
+Additional fields required for the product can be consulted here.
 
-\\
 
-\\
-
-pueden ser consultados aquí
 
 [#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto](../../es/productos.md#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto "mention")
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="_channel" required="false" %}
-Siempre enviar WS
+Always send "WS"
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="_version" required="false" %}
-Enviar versión del API
+API version
 {% endswagger-parameter %}
 {% endswagger %}
