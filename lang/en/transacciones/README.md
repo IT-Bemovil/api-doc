@@ -98,13 +98,13 @@ Customer ID (the same as sent in the sale)
 
 ### Status transaction
 
-| Estado     | Codigo |
-| ---------- | ------ |
-| PENDING    | 1      |
-| APPROVED   | 2      |
-| REJECTED   | 3      |
-| PROCESSING | 4      |
-| PARTIAL    | 5      |
+| Status     | Code |
+| ---------- | ---- |
+| PENDING    | 1    |
+| APPROVED   | 2    |
+| REJECTED   | 3    |
+| PROCESSING | 4    |
+| PARTIAL    | 5    |
 
 ### Sell a product
 
@@ -122,7 +122,7 @@ Additional fields required for the product can be consulted here.
 
 
 
-[#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto](../../es/productos.md#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto "mention")
+[#service-that-allows-obtaining-all-detailed-information-about-a-product](../productos.md#service-that-allows-obtaining-all-detailed-information-about-a-product "mention")
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="_channel" type="string" required="false" %}
@@ -178,7 +178,7 @@ Additional fields required for the product can be consulted here.
 
 
 
-[#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto](../../es/productos.md#servicio-que-permite-obtener-toda-la-informacion-a-detalle-de-un-producto "mention")
+[#service-that-allows-obtaining-all-detailed-information-about-a-product](../productos.md#service-that-allows-obtaining-all-detailed-information-about-a-product "mention")
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="_channel" required="false" %}
