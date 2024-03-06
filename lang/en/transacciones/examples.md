@@ -23,7 +23,7 @@
 
 <summary>Sell Betplay</summary>
 
-El campo \_geolocation se valida si el producto está activo contra la ciudad más cercana
+The \_geolocation field is validated if the product is active against the nearest city.
 
 ```json
 
