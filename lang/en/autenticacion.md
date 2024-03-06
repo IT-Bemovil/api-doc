@@ -1,26 +1,26 @@
 # Authentication
 
-### Ambientes API
+### API Stages
 
-#### Ambiente productivo
+#### Production environment
 
-Url de producción para efectuar transacciones reales
+Production URL for making real transactions
 
 {% hint style="info" %}
 https://apiv2.bemovil.net
 {% endhint %}
 
-#### Ambiente de pruebas
+#### Sandbox environment
 
-Url de pruebas para efectuar transacciones de prueba
+Testing URL for conducting test transactions
 
 {% hint style="info" %}
 https://apiv2.sandbox.bemovil.net
 {% endhint %}
 
-### Autorización
+### Authorization
 
-La forma de autenticación será por headers en el campo "Authorization", el token será proporcionado por la empresa
+The authentication method will be via headers in the "Authorization" field, with the token provided by the company.
 
 ```json
 {
