@@ -1,13 +1,13 @@
 # API Introduction
 
-## Bienvenido a Bemovil API
+## Welcome to Bemovil API
 
-Aquí tienes toda la documentación que necesitas para consultar, gestionar y generar transacciones con Bemovil desde tu propio sistema
+Here is all the documentation you need to consult, manage, and generate transactions with Bemovil from your own system.
 
-## ¿Cómo debería ser la integración?
+## How should the integration be?
 
-* Obtener credenciales de la aplicación
-* Obtener URL's de ambientes de prueba
-* Probar correcto consumo de servicios
-* Desarrollar consumo de endpoints necesarios
-* Hacer paso a producción
+* Obtain application credentials
+* Obtain URLs for testing environments
+* Test proper consumption of services
+* Develop consumption of necessary endpoints
+* Move to production stage
