@@ -1,10 +1,13 @@
 # Table of contents
 
-* [Introducción API](README.md)
-* [🔓 Autenticación](autenticacion.md)
-* [💔 Errores](errores.md)
-* [💸 Transacciones](transacciones.md)
-* [😁 Productos](productos/README.md)
-  * [Examples](productos/examples.md)
-* [📅 Reportes](reportes.md)
-* [💸 Cargar saldo](cargar-saldo.md)
+## Group 1
+
+* [Español](README.md)
+  * [Introducción API](group-1/espanol/readme.md)
+  * [🔓 Autenticación](group-1/espanol/autenticacion.md)
+  * [💔 Errores](group-1/espanol/errores.md)
+  * [💸 Transacciones](group-1/espanol/transacciones/README.md)
+    * [Ejemplos](group-1/espanol/transacciones/examples.md)
+  * [😁 Productos](group-1/espanol/productos.md)
+  * [📅 Reportes](group-1/espanol/reportes.md)
+  * [💸 Cargar saldo](group-1/espanol/cargar-saldo.md)
