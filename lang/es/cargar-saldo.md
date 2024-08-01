@@ -1,27 +1,20 @@
 # Cargar saldo
 
-{% swagger method="post" path="generateLink" baseUrl="transactions/payment/" summary="Servicio que genera un link de pago" expanded="true" %}
-{% swagger-description %}
+## Servicio que genera un link de pago
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark>  `api/v1/transactions/payment/generateLink`
 
-{% swagger-parameter in="body" name="data.reference" required="false" %}
-Referencia de pago
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="data.amount" required="false" %}
-Valor a recaudar
-{% endswagger-parameter %}
+| Name             | Type   | Description                                       |
+| ---------------- | ------ | ------------------------------------------------- |
+| data.reference   | String | Referencia de pago                                |
+| data.amount      | String | Valor a recaudar                                  |
+| data.confirmUrl  | String | URL del webhook donde se notificará               |
+| data.responseUrl | String | URL donde el usuario será redirigo luego de pagar |
 
-{% swagger-parameter in="body" name="data.confirmUrl" required="false" %}
-URL del webhook donde se notificará
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="data.responseUrl" required="false" %}
-URL donde el usuario será redirigo luego de pagar
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="" %}
+{% tabs %}
+{% tab title="200: OK " %}
 ```javascript
 {
     "data": {
@@ -29,8 +22,8 @@ URL donde el usuario será redirigo luego de pagar
     }
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 #### Al WebHook compartido por el cliente se enviará el siguiente Request:
 
