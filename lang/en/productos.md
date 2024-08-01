@@ -6,16 +6,18 @@ description: >-
 
 # Products
 
-{% swagger method="post" path="list" baseUrl="/apiv1/products/" summary="Service that allows querying products and their assigned commission." expanded="true" %}
-{% swagger-description %}
+## Service that allows querying products and their assigned commission.
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `/api/v1/products/list`
 
-{% swagger-parameter in="body" name="data" required="true" type="Object" %}
-Data field
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-response status="200: OK" description="Successful" %}
+| Name                                   | Type   | Description |
+| -------------------------------------- | ------ | ----------- |
+| data<mark style="color:red;">\*</mark> | Object | Data field  |
+
+{% tabs %}
+{% tab title="200: OK Successful" %}
 ```javascript
 {
   "statusCode":200,
@@ -43,19 +45,23 @@ Data field
   "_channel":"web"
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
-{% swagger method="post" path="get" baseUrl="/api/v1/products/" summary="Service that allows obtaining all detailed information about a product." expanded="true" %}
-{% swagger-description %}
+## Service that allows obtaining all detailed information about a product.
+
+<mark style="color:green;">`POST`</mark> `/api/v1/products/get`
+
 Note: The "options" field returns the necessary information to reconstruct the graphical view.
-{% endswagger-description %}
 
-{% swagger-parameter in="body" name="data.productId" type="string" required="true" %}
-Product ID
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-response status="200: OK" description="Successful" %}
+| Name                                             | Type   | Description |
+| ------------------------------------------------ | ------ | ----------- |
+| data.productId<mark style="color:red;">\*</mark> | string | Product ID  |
+
+{% tabs %}
+{% tab title="200: OK Successful" %}
 ```javascript
 {
   "statusCode":200,
@@ -82,5 +88,5 @@ Product ID
   "_channel":"web"
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
