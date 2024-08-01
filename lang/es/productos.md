@@ -6,16 +6,18 @@ description: >-
 
 # Productos
 
-{% swagger method="post" path="list" baseUrl="/apiv1/products/" summary="Servicio que permite consultar productos y su comisión asignada" expanded="true" %}
-{% swagger-description %}
+## Servicio que permite consultar productos y su comisión asignada
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `/api/v1/products/list`
 
-{% swagger-parameter in="body" name="data" required="true" type="Object" %}
+#### Request Body
 
-{% endswagger-parameter %}
+| Name                                   | Type   | Description |
+| -------------------------------------- | ------ | ----------- |
+| data<mark style="color:red;">\*</mark> | Object |             |
 
-{% swagger-response status="200: OK" description="Respuesta exitosa" %}
+{% tabs %}
+{% tab title="200: OK Respuesta exitosa" %}
 ```javascript
 {
   "statusCode":200,
@@ -43,19 +45,23 @@ description: >-
   "_channel":"web"
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
-{% swagger method="post" path="get" baseUrl="/api/v1/products/" summary="Servicio que permite obtener toda la información a detalle de un producto" expanded="true" %}
-{% swagger-description %}
+## Servicio que permite obtener toda la información a detalle de un producto
+
+<mark style="color:green;">`POST`</mark> `/api/v1/products/get`
+
 Note: El campo "options" devuelve la información necesaria para reconstruir la vista a nivel gráfico
-{% endswagger-description %}
 
-{% swagger-parameter in="body" name="data.productId" type="string" required="true" %}
-Identificador del producto
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-response status="200: OK" description="Respuesta exitosa" %}
+| Name                                             | Type   | Description                |
+| ------------------------------------------------ | ------ | -------------------------- |
+| data.productId<mark style="color:red;">\*</mark> | string | Identificador del producto |
+
+{% tabs %}
+{% tab title="200: OK Respuesta exitosa" %}
 ```javascript
 {
   "statusCode":200,
@@ -82,5 +88,5 @@ Identificador del producto
   "_channel":"web"
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
